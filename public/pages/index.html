@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Page — Tunely.fm</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f7f6f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #28251d;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    p  { color: #7a7974; margin-bottom: 2rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background: #01696f;
+      color: #fff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 180ms;
+    }
+    .btn:hover { background: #0c4e54; }
+  </style>
+</head>
+<body>
+  <h1>Static Page</h1>
+  <p>This is a plain HTML page served directly from <code>public/pages/</code>.</p>
+
+  <!-- Anchor tag button — links back to the Vue SPA -->
+  <a href="/#/" class="btn">← Back to App</a>
+</body>
+</html>
