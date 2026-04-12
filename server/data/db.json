@@ -1,0 +1,13 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "Example Song",
+            "artist": "Example Artist",
+            "album": "Example Album",
+            "year": 2000,
+            "genre": "Example Genre",
+            "file": "song1.mp3"
+        }
+    ]
+}
