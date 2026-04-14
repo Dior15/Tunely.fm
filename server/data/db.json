@@ -1,0 +1,184 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "3AM West End",
+            "artist": "statusq",
+            "album": "3AM West End",
+            "year": "Unknown",
+            "genre": "Unclassifiable",
+            "file": "3am-west-end.mp3"
+        },
+        {
+            "id": 2,
+            "title": "A good bass for gambling",
+            "artist": "Komiku",
+            "album": "A good bass for gambling",
+            "year": "Unknown",
+            "genre": "Folk",
+            "file": "a-good-bass-for-gambling.mp3"
+        },
+        {
+            "id": 3,
+            "title": "Americana",
+            "artist": "Holizna",
+            "album": "Americana",
+            "year": 2022,
+            "genre": "Unknown",
+            "file": "americana.mp3"
+        },
+        {
+            "id": 4,
+            "title": "Aria",
+            "artist": "Kimiko Ishizaka",
+            "album": "The Open Goldberg Variations",
+            "year": 2012,
+            "genre": "Classical",
+            "file": "aria.mp3"
+        },
+        {
+            "id": 5,
+            "title": "Bach's March Fur Die Arche",
+            "artist": "The United Sated Army Old Guard Fife and Drums Corps",
+            "album": "Celebrating 50 Years",
+            "year": 2014,
+            "genre": "Classical",
+            "file": "bachs-march-fur-die-arche.mp3"
+        },
+        {
+            "id": 6,
+            "title": "Chicken Reel",
+            "artist": "Arthur Collins",
+            "album": "Antique Phonograph Music Program 04/21/2009",
+            "year": 1911,
+            "genre": "Old-Time",
+            "file": "chicken-reel.mp3"
+        },
+        {
+            "id": 7,
+            "title": "D D D Dancing",
+            "artist": "Soft and Furious",
+            "album": "Dancing in the closet",
+            "year": 2017,
+            "genre": "Electronic",
+            "file": "d-d-d-dancing.mp3"
+        },
+        {
+            "id": 8,
+            "title": "Dirty shoes blues",
+            "artist": "Loyalty Freak Music",
+            "album": "INSTRUMENTAL RandB BEATS TO SING OR RAP ON",
+            "year": 2018,
+            "genre": "Hip-Hop",
+            "file": "dirty-shoes-blues.mp3"
+        },
+        {
+            "id": 9,
+            "title": "END",
+            "artist": "Koi-discovery",
+            "album": "END",
+            "year": "Unknown",
+            "genre": "Unkown",
+            "file": "end.mp3"
+        },
+        {
+            "id": 10,
+            "title": "Halloween Ghost Party",
+            "artist": "Loyalty Freak Music",
+            "album": "WITCHY, BATTY, SPOOKY, HALLOWEEN IN SEPTEMBER !!",
+            "year": 2018,
+            "genre": "Ambient",
+            "file": "halloween-ghost-party.mp3"
+        },
+        {
+            "id": 11,
+            "title": "Interstellar breakfast",
+            "artist": "TRG Banks",
+            "album": "This train doesn't stop at Rugby",
+            "year": 2018,
+            "genre": "Soundtrack",
+            "file": "interstellar-breakfast.mp3"
+        },
+        {
+            "id": 12,
+            "title": "It feels good to be alive too",
+            "artist": "Loyalty Freak Music",
+            "album": "ROBOT DANCE !",
+            "year": 2017,
+            "genre": "Electronic",
+            "file": "it-feels-good-to-be-alive-too.mp3"
+        },
+        {
+            "id": 13,
+            "title": "Lost in Space",
+            "artist": "Holizna",
+            "album": "Lost in Space",
+            "year": 2022,
+            "genre": "Unknown",
+            "file": "lost-in-space.mp3"
+        },
+        {
+            "id": 14,
+            "title": "Lost in the City",
+            "artist": "Holizna",
+            "album": "Lost in the City",
+            "year": 2022,
+            "genre": "Unknown",
+            "file": "lost-in-the-city.mp3"
+        },
+        {
+            "id": 15,
+            "title": "Medieval: Battle",
+            "artist": "RandomMind",
+            "album": "Medieval: Battle",
+            "year": "Unknown",
+            "genre": "Medieval",
+            "file": "medieval-battle.mp3"
+        },
+        {
+            "id": 16,
+            "title": "Medieval: Exploration",
+            "artist": "RandomMind",
+            "album": "Medieval: Exploration",
+            "year": "Unknown",
+            "genre": "Unknown",
+            "file": "medieval-exploration.mp3"
+        },
+        {
+            "id": 17,
+            "title": "One",
+            "artist": "Cathedral Of Chemical Equilibrium",
+            "album": "Sonic Action",
+            "year": 2017,
+            "genre": "Unknown",
+            "file": "one.mp3"
+        },
+        {
+            "id": 18,
+            "title": "Sad Floor",
+            "artist": "Monplaisir",
+            "album": "Spirit Animal",
+            "year": 2017,
+            "genre": "Rock",
+            "file": "sad-floor.mp3"
+        },
+        {
+            "id": 19,
+            "title": "Shake me, Baby",
+            "artist": "Soft and Furious",
+            "album": "Dancing in the closet",
+            "year": 2017,
+            "genre": "Electronic",
+            "file": "shake-me-baby.mp3"
+        },
+        {
+            "id": 20,
+            "title": "Tinnitus Dance",
+            "artist": "Dancefloor is Lava",
+            "album": "La Boum 2020",
+            "year": 2018,
+            "genre": "Disco",
+            "file": "tinnitus-dance.mp3"
+        }
+    ]
+}
