@@ -8,6 +8,24 @@
             "year": 2000,
             "genre": "Example Genre",
             "file": "song1.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Example Song 2",
+            "artist": "Example Artist 2",
+            "album": "Example Album 2",
+            "year": 2000,
+            "genre": "Example Genre 2",
+            "file": "song2.mp3"
+        },
+        {
+            "id": 3,
+            "title": "Example Song 3",
+            "artist": "Example Artist 3",
+            "album": "Example Album 3",
+            "year": 2000,
+            "genre": "Example Genre 3",
+            "file": "song3.mp3"
         }
     ]
 }
