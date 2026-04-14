@@ -4,6 +4,6 @@ import SongList from "./components/SongList.vue"
 </script>
 
 <template>
+  <SongList />
   <HelloWorld />
-   <SongList />
 </template>

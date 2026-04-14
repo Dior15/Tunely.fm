@@ -35,3 +35,8 @@ npm run start
 |**GET**|/api/active|Returns `ok` status if the server is running|
 |**GET**|/api/songs|Returns JSON metadata of all songs|
 |**GET**|/api/songs/stream?id=<song_id>|Returns a single song file by its ID|
+
+## Music Source
+The music in this project is sourced from the [SoundSafari CC0-1.0-Music](https://github.com/SoundSafari/CC0-1.0-Music) corpus. 
+
+All audio assets are dedicated to the public domain under the **CC0 1.0 Universal** license. You can find the full legal text in the `server/music/LICENSE` file within this repository.
