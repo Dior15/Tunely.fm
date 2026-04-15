@@ -1,28 +1,10 @@
 <script setup>
-  import {ref, onMounted} from "vue";
+  import { onMounted } from "vue";
+  import { usePlayer } from '../composables/usePlayer.js'
 
-  let songs = ref([]);
+  const { songs, fetchSongs, playSong } = usePlayer()
 
-  onMounted(async () => {
-    try {
-      const response = await fetch("http://localhost:3000/api/songs");
-      songs.value = await response.json();
-    } catch (e) {
-      console.error("songs.json failed to load.", e);
-    }
-  });
-
-  let currentlyPlayingURL = new Audio();
-
-  function playSong(songID) {
-    currentlyPlayingURL.pause();
-    currentlyPlayingURL = new Audio(`http://localhost:3000/api/songs/stream?id=${songID}`);
-
-    currentlyPlayingURL.addEventListener("canplaythrough", () => {
-      currentlyPlayingURL.play();
-    });
-  }
-
+  onMounted(fetchSongs)
 </script>
 
 <template>
@@ -39,4 +21,5 @@
       </div>
     </div>
   </div>
+
 </template>

@@ -177,17 +177,7 @@ code {
   }
 }
 
-#app {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
+/* #app styles moved to App.vue global <style> block */
 
 #center {
   display: flex;
@@ -316,14 +306,4 @@ code {
   }
 }
 
-.songTile {
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
-}
-
-.songTile span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+/* songTile styles removed — SongList now uses scoped styles */
