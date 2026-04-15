@@ -1,0 +1,68 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --accent: #aa3bff;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: rgba(255, 255, 255, 0.87);
+    --text-h: #ffffff;
+    --bg: #242424;
+    --accent: #c471ed;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 { 
+  color: var(--text-h);
+  font-size: 2rem; 
+  margin-bottom: 0.5rem; 
+}
+
+p  { 
+  margin-bottom: 2rem; 
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 180ms;
+}
+
+.btn:hover { 
+  opacity: 0.85; 
+}
+
+a {
+  color: #42b883; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #33a06f; 
+}
