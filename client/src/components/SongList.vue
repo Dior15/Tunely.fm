@@ -9,8 +9,14 @@
 
 <template>
 
-  <div class="box mt-3 mb-4 ml-6 mr-6">
-    <h1 class="title">Tunely.fm</h1>
+  <div id="container" class="box mt-3 mb-4 ml-6 mr-6">
+    <!-- <h1 class="title">Tunely.fm</h1> -->
+     <div id="listHeader" class="box is-flex mb-1 p-1 has-text-left is-vcentered">
+        <span class="column is-one-third is-vcentered is-size-5 pt-0 pb-0"><p>Title</p></span>
+        <span class="column is-one-quarter is-size-5 pt-0 pb-0"><p>Artist</p></span>
+        <span class="column is-one-quarter is-size-5 pt-0 pb-0"><p>Album</p></span>
+        <span class="column has-text-right is-size-5 pt-0 pb-0"><p class="ml-auto">Year</p></span>
+      </div>
   
     <div id="songList columns">
       <div v-for="song in songs" class="songTile box is-flex mb-1 p-1 has-text-left is-vcentered" :class="{'isPlaying': currentSong != null && currentSong.id == song.id}">
@@ -42,5 +48,16 @@
 
   .isPlaying {
     background-image: linear-gradient(to right, #9935e7, #14161a);
+  }
+
+  #container {
+    background-color: #1f1f1f;
+  }
+
+  #listHeader span p {
+    width: fit-content;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, #9935e7, #abb1bf);
   }
 </style>
