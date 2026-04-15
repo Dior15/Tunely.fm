@@ -10,7 +10,7 @@
 <template>
 
   <div class="box mt-3 mb-4 ml-6 mr-6">
-    <h1 class="title">Song List</h1>
+    <h1 class="title">Tunely.fm</h1>
   
     <div id="songList columns">
       <div v-for="song in songs" class="songTile box is-flex mb-1 p-1 has-text-left is-vcentered" :class="{'isPlaying': currentSong != null && currentSong.id == song.id}">
