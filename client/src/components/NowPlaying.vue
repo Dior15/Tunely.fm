@@ -179,7 +179,6 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
   background: rgba(20, 12, 34, 0.88) !important;
   backdrop-filter: blur(22px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border-top: 1px solid rgba(170, 59, 255, 0.3) !important;
   box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.5) !important;
 }
 

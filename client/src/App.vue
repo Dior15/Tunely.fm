@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import SongList from "./components/SongList.vue"
 import NowPlaying from './components/NowPlaying.vue'
+import NavBar     from './components/NavBar.vue'
 
 // navbar toggle based on screen-size
 import {ref} from 'vue'
@@ -16,8 +17,9 @@ function toggleMenu() {
 <template>
   
   <div id="tunely-app">
+    <NavBar />
     <!-- Bulma style navbar -->
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <!-- <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           <strong>Tunely.fm</strong>
@@ -45,7 +47,7 @@ function toggleMenu() {
           <a class="navbar-item" href="../public/pages/info.html">Info</a>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <main class="tunely-main">
       <SongList />
     </main>
@@ -81,7 +83,6 @@ button { font-family: inherit; }
   height: 100svh;
   max-width: 1280px;
   margin: 0 auto;
-  border-inline: 1px solid rgba(255, 255, 255, 0.06);
   background: linear-gradient(165deg, #110920 0%, #0d0814 55%, #0a0c1a 100%);
   overflow: hidden;
 }
