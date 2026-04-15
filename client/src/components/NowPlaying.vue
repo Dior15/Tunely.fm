@@ -40,10 +40,10 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
   <div v-else class="box np-box px-5 py-3">
 
     <!-- Top row: disc + info + transport + volume -->
-    <div class="level is-mobile np-level">
+    <div class="level is-mobile np-level columns">
 
       <!-- LEFT: spinning disc + song info -->
-      <div class="level-left np-left">
+      <div class="level-left np-left is-justify-content-flex-start column is-one-fifth">
         <!-- Disc -->
         <div class="level-item">
           <div class="np-disc" :class="{ 'np-disc--spinning': isPlaying }">
@@ -62,6 +62,9 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
             <p class="np-artist is-size-7">{{ currentSong.artist }}</p>
             <p class="np-album is-size-7 has-text-grey">
               {{ currentSong.album }}
+            </p>
+            <p class="np-genre is-size-7 has-text-grey">
+              {{ currentSong.genre }}
               <span v-if="currentSong.year !== 'Unknown'" class="has-text-grey-dark"> · {{ currentSong.year }}</span>
             </p>
           </div>
@@ -69,7 +72,7 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
       </div>
 
       <!-- CENTER: transport controls + scrubber -->
-      <div class="level-item np-center-block">
+      <div class="level-item np-center-block column is-three-fifths">
         <!-- Transport buttons -->
         <div class="buttons is-centered are-small np-controls mb-2">
           <!-- Shuffle -->
@@ -137,7 +140,7 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
       </div>
 
       <!-- RIGHT: volume -->
-      <div class="level-right np-right">
+      <div class="level-right np-right is-one-fifth">
         <div class="level-item">
           <div class="is-flex is-align-items-center np-volume-row">
             <button
