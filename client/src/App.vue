@@ -1,5 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import SongList from "./components/SongList.vue"
 import NowPlaying from './components/NowPlaying.vue'
 import NavBar     from './components/NavBar.vue'

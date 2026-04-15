@@ -35,6 +35,8 @@ npm run start
 |**GET**|/api/active|Returns `ok` status if the server is running|
 |**GET**|/api/songs|Returns JSON metadata of all songs|
 |**GET**|/api/songs/stream?id=<song_id>|Returns a single song file by its ID|
+|**POST**|/api/songs/play?id=<song_id>|Increments the 'play_count' of a song by its ID|
+|**POST**|/api/songs/duration?id=<song_id>&duration=<duration>|Updates the 'average' and 'num_samples' of the 'listen_duration' of a song by its ID|
 
 ## Music Source
 The music in this project is sourced from the [SoundSafari CC0-1.0-Music](https://github.com/SoundSafari/CC0-1.0-Music) corpus. 
