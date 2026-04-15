@@ -1,10 +1,12 @@
 <script setup>
 import SongList   from './components/SongList.vue'
 import NowPlaying from './components/NowPlaying.vue'
+import NavBar     from './components/NavBar.vue'
 </script>
 
 <template>
   <div id="tunely-app">
+    <NavBar />
     <main class="tunely-main">
       <SongList />
     </main>
@@ -40,7 +42,6 @@ button { font-family: inherit; }
   height: 100svh;
   max-width: 1280px;
   margin: 0 auto;
-  border-inline: 1px solid rgba(255, 255, 255, 0.06);
   background: linear-gradient(165deg, #110920 0%, #0d0814 55%, #0a0c1a 100%);
   overflow: hidden;
 }
