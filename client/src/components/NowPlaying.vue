@@ -1,10 +1,11 @@
 <script setup>
+import { ref, watch, nextTick } from 'vue'
 import { usePlayer } from '../composables/usePlayer.js'
 
 const {
   currentSong, isPlaying, isLoading,
   shuffle, repeat,
-  currentTime, duration, volume, progress,
+  currentTime, duration, volume, progress, artURL,
   togglePlay, next, prev,
   seek, setVolume, toggleShuffle, cycleRepeat,
 } = usePlayer()
@@ -24,7 +25,30 @@ function onVolume(e) {
   setVolume(parseFloat(e.target.value))
 }
 
+// update all marquee elements
+function update_marquees() 
+{
+  nextTick(() => {
+    document.querySelectorAll('.np-marquee').forEach(e => {
+      const viewport = e.parentElement
+      // calculate overflow to determine if marquee text should oscillate
+      const overflow = e.scrollWidth - viewport.clientWidth
+      const should_scroll = overflow > 6
+      // set the movement distance for the marquee
+      e.style.setProperty('--marquee-offset', `${Math.max(0, overflow)}px`)
+      e.classList.toggle('np-marquee--active', should_scroll)
+    })
+  })
+}
+watch(() => currentSong.value, update_marquees)
+watch(isPlaying, update_marquees)
+
 const repeatLabel = { none: '', all: 'ALL', one: '1' }
+
+// art error handling (for when a songs art fails to load)
+const artError = ref(false)
+watch(artURL, () => { artError.value = false }) // reset art error when the art URL changes
+
 </script>
 
 <template>
@@ -40,39 +64,49 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
   <div v-else class="box np-box px-5 py-3">
 
     <!-- Top row: disc + info + transport + volume -->
-    <div class="level is-mobile np-level columns">
+    <div class="level is-mobile np-level">
 
-      <!-- LEFT: spinning disc + song info -->
-      <div class="level-left np-left is-justify-content-flex-start column is-one-fifth">
-        <!-- Disc -->
-        <div class="level-item">
-          <div class="np-disc" :class="{ 'np-disc--spinning': isPlaying }">
-            <span class="icon">
-              <font-awesome-icon icon="music" />
-            </span>
-          </div>
+      <!-- DISC: art disk -->
+      <div class="np-disc-wrap">
+        <div class="np-disc" :class="{ 'np-disc--spinning': isPlaying }">
+          <img
+            v-if="artURL && !artError" :src="artURL" :alt="currentSong.title" class="np-art"
+            @error="artError = true"
+          />
+          <span v-else class="icon">
+            <font-awesome-icon icon="music" />
+          </span>
         </div>
+      </div>
 
-        <!-- Song info -->
-        <div class="level-item np-info">
-          <div>
-            <p class="np-title has-text-weight-bold" :title="currentSong.title">
-              {{ currentSong.title }}
-            </p>
-            <p class="np-artist is-size-7">{{ currentSong.artist }}</p>
-            <p class="np-album is-size-7 has-text-grey">
-              {{ currentSong.album }}
-            </p>
-            <p class="np-genre is-size-7 has-text-grey">
-              {{ currentSong.genre }}
-              <span v-if="currentSong.year !== 'Unknown'" class="has-text-grey-dark"> · {{ currentSong.year }}</span>
+      <!-- INFO: song title + artist + album + genre + year -->
+      <div class="np-info">
+        <!-- song title -->
+        <div class="np-info-lines">
+          <div class="np-marquee-viewport" :title="currentSong.title">
+            <p class="np-title has-text-weight-bold np-marquee">{{ currentSong.title }}</p>
+          </div>
+          <!-- song artist -->
+          <div class="np-marquee-viewport" :title="currentSong.artist">
+            <p class="np-artist is-size-7 np-marquee">{{ currentSong.artist }}</p>
+          </div>
+          <!-- song album -->
+          <div class="np-marquee-viewport" :title="currentSong.album">
+            <p class="np-album is-size-7 has-text-grey np-marquee">{{ currentSong.album ?? "Unknown Album/Single" }}</p>
+          </div>
+          <!-- song genre + year -->
+          <div class="np-marquee-viewport"
+            :title="`${currentSong.genre ?? 'Unknown Genre'} · ${currentSong.year ?? 'Unknown Year'}`">
+            <p class="np-genre is-size-7 has-text-grey np-marquee">
+              {{ currentSong.genre ?? 'Unknown Genre' }}
+              <span class="has-text-grey-dark"> · {{ currentSong.year ?? 'Unknown Year' }}</span>
             </p>
           </div>
         </div>
       </div>
 
       <!-- CENTER: transport controls + scrubber -->
-      <div class="level-item np-center-block column is-three-fifths">
+      <div class="level-item np-center-block">
         <!-- Transport buttons -->
         <div class="buttons is-centered are-small np-controls mb-2">
           <!-- Shuffle -->
@@ -140,7 +174,7 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
       </div>
 
       <!-- RIGHT: volume -->
-      <div class="level-right np-right is-one-fifth">
+      <div class="level-right np-right">
         <div class="level-item">
           <div class="is-flex is-align-items-center np-volume-row">
             <button
@@ -183,6 +217,9 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
   backdrop-filter: blur(22px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(160%);
   box-shadow: 0 -6px 36px rgba(0, 0, 0, 0.5) !important;
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
+  min-height: 100px;
 }
 
 /* ── Idle bar ── */
@@ -196,19 +233,31 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
 .np-level {
   gap: 12px;
   flex-wrap: nowrap;
+  width: 100%;
 }
-.np-left  { flex-shrink: 0; gap: 14px !important; }
-.np-right { flex-shrink: 0; }
+.np-disc-wrap {
+  flex: 0 0 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .np-center-block {
-  flex: 1;
+  flex: 1 1 auto;
   flex-direction: column !important;
+  display: flex;
   min-width: 0;
+  justify-content: center;
+}
+.np-right {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ── Spinning disc ── */
 .np-disc {
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #3a1566, #120a1e);
   border: 2px solid rgba(170, 59, 255, 0.45);
@@ -222,36 +271,67 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
   flex-shrink: 0;
 }
 .np-disc--spinning {
-  animation: disc-spin 5s linear infinite;
+  animation: disc-spin 7s linear infinite;
   box-shadow: 0 0 26px rgba(170, 59, 255, 0.65), 0 0 8px rgba(170, 59, 255, 0.3) inset;
 }
 @keyframes disc-spin { to { transform: rotate(360deg); } }
 
+.np-art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* ── Song info ── */
-.np-info { min-width: 0; }
+.np-info {
+  flex: 0 0 180px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.np-info-lines {
+  min-width: 0;
+  width: 100%;
+}
+
+.np-marquee-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.np-title,
+.np-artist,
+.np-album,
+.np-genre {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.3;
+  margin: 0;
+  transform: translateX(0);
+  will-change: transform;
+}
+
+.np-marquee--active {
+  animation: marquee 7s linear infinite alternate;
+}
+
 .np-title {
   color: #f0e8ff;
   font-size: 14px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-  line-height: 1.3;
 }
+
 .np-artist {
   color: #c084fc !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-  line-height: 1.3;
 }
-.np-album {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-  line-height: 1.3;
+
+@keyframes marquee {
+  0%, 18% {
+    transform: translateX(0);
+  }
+  82%, 100% {
+    transform: translateX(calc(-1 * var(--marquee-offset, 0px)));
+  }
 }
 
 /* ── Transport buttons ── */
@@ -373,10 +453,10 @@ const repeatLabel = { none: '', all: 'ALL', one: '1' }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .np-right  { display: none !important; }
+  /* .np-right  { display: none !important; } */
   .np-album  { display: none !important; }
 }
 @media (max-width: 500px) {
-  .np-left  { display: none !important; }
+  /* .np-left  { display: none !important; } */
 }
 </style>

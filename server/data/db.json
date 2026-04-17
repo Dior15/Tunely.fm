@@ -5,28 +5,30 @@
             "title": "3AM West End",
             "artist": "statusq",
             "album": "3AM West End",
-            "year": "Unknown",
+            "year": null,
             "genre": "Unclassifiable",
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "3am-west-end.mp3"
+            "file": "3am-west-end.mp3",
+            "art_source": "https://picsum.photos/100"
         },
         {
             "id": 2,
             "title": "A good bass for gambling",
             "artist": "Komiku",
             "album": "A good bass for gambling",
-            "year": "Unknown",
+            "year": null,
             "genre": "Folk",
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "a-good-bass-for-gambling.mp3"
+            "file": "a-good-bass-for-gambling.mp3",
+            "art_source": "https://picsum.photos/101"
         },
         {
             "id": 3,
@@ -34,13 +36,14 @@
             "artist": "Holizna",
             "album": "Americana",
             "year": 2022,
-            "genre": "Unknown",
+            "genre": null,
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "americana.mp3"
+            "file": "americana.mp3",
+            "art_source": "https://picsum.photos/102"
         },
         {
             "id": 4,
@@ -54,7 +57,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "aria.mp3"
+            "file": "aria.mp3",
+            "art_source": "https://picsum.photos/103"
         },
         {
             "id": 5,
@@ -68,7 +72,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "bachs-march-fur-die-arche.mp3"
+            "file": "bachs-march-fur-die-arche.mp3",
+            "art_source": "https://picsum.photos/104"
         },
         {
             "id": 6,
@@ -82,7 +87,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "chicken-reel.mp3"
+            "file": "chicken-reel.mp3",
+            "art_source": "https://picsum.photos/105"
         },
         {
             "id": 7,
@@ -96,7 +102,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "d-d-d-dancing.mp3"
+            "file": "d-d-d-dancing.mp3",
+            "art_source": "https://picsum.photos/106"
         },
         {
             "id": 8,
@@ -110,21 +117,23 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "dirty-shoes-blues.mp3"
+            "file": "dirty-shoes-blues.mp3",
+            "art_source": "https://picsum.photos/107"
         },
         {
             "id": 9,
             "title": "END",
             "artist": "Koi-discovery",
-            "album": "END",
-            "year": "Unknown",
+            "album": "Post Morphose",
+            "year": null,
             "genre": "Unkown",
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "end.mp3"
+            "file": "end.mp3",
+            "art_source": "https://picsum.photos/108"
         },
         {
             "id": 10,
@@ -138,7 +147,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "halloween-ghost-party.mp3"
+            "file": "halloween-ghost-party.mp3",
+            "art_source": "https://picsum.photos/109"
         },
         {
             "id": 11,
@@ -152,7 +162,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "interstellar-breakfast.mp3"
+            "file": "interstellar-breakfast.mp3",
+            "art_source": "https://picsum.photos/110"
         },
         {
             "id": 12,
@@ -166,83 +177,89 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "it-feels-good-to-be-alive-too.mp3"
+            "file": "it-feels-good-to-be-alive-too.mp3",
+            "art_source": "https://picsum.photos/111"
         },
         {
             "id": 13,
             "title": "Lost in Space",
             "artist": "Holizna",
-            "album": "Lost in Space",
+            "album": "Lost",
             "year": 2022,
-            "genre": "Unknown",
+            "genre": null,
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "lost-in-space.mp3"
+            "file": "lost-in-space.mp3",
+            "art_source": "https://picsum.photos/112"
         },
         {
             "id": 14,
             "title": "Lost in the City",
             "artist": "Holizna",
-            "album": "Lost in the City",
+            "album": "Lost",
             "year": 2022,
-            "genre": "Unknown",
+            "genre": null,
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "lost-in-the-city.mp3"
+            "file": "lost-in-the-city.mp3",
+            "art_source": "https://picsum.photos/113"
         },
         {
             "id": 15,
             "title": "Medieval: Battle",
             "artist": "RandomMind",
-            "album": "Medieval: Battle",
-            "year": "Unknown",
+            "album": null,
+            "year": null,
             "genre": "Medieval",
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "medieval-battle.mp3"
+            "file": "medieval-battle.mp3",
+            "art_source": "https://picsum.photos/114"
         },
         {
             "id": 16,
             "title": "Medieval: Exploration",
             "artist": "RandomMind",
-            "album": "Medieval: Exploration",
-            "year": "Unknown",
-            "genre": "Unknown",
+            "album": null,
+            "year": null,
+            "genre": null,
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "medieval-exploration.mp3"
+            "file": "medieval-exploration.mp3",
+            "art_source": "https://picsum.photos/115"
         },
         {
             "id": 17,
             "title": "One",
             "artist": "Cathedral Of Chemical Equilibrium",
-            "album": "Sonic Action",
+            "album": "Sonic Action and Regulation",
             "year": 2017,
-            "genre": "Unknown",
+            "genre": null,
             "play_count": 0,
             "listen_duration": {
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "one.mp3"
+            "file": "one.mp3",
+            "art_source": "https://picsum.photos/116"
         },
         {
             "id": 18,
             "title": "Sad Floor",
             "artist": "Monplaisir",
-            "album": "Spirit Animal",
+            "album": "Power Animal",
             "year": 2017,
             "genre": "Rock",
             "play_count": 0,
@@ -250,7 +267,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "sad-floor.mp3"
+            "file": "sad-floor.mp3",
+            "art_source": "https://picsum.photos/117"
         },
         {
             "id": 19,
@@ -264,7 +282,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "shake-me-baby.mp3"
+            "file": "shake-me-baby.mp3",
+            "art_source": "https://picsum.photos/118"
         },
         {
             "id": 20,
@@ -278,7 +297,8 @@
                 "average": 0,
                 "num_samples": 0
             },
-            "file": "tinnitus-dance.mp3"
+            "file": "tinnitus-dance.mp3",
+            "art_source": "https://picsum.photos/119"
         }
     ]
 }
