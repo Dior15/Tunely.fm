@@ -5,3 +5,8 @@ Nathaniel:
 > So how can I properly credit/acknowledge this repo when adding songs from it to my own repo?
 
 > Why isn't my linear gradient applying? I know I'm referencing the correct tags because when I apply a solid color, it works: {The contents of the SongList component's style tag were also passed}
+
+Khristian:
+> For some reason the shuffle and repeat buttons are not highlighting when selected, why?
+
+> I am adjusting the size of the logo in the css, but it appears the same size, is there a conflict in the styling?
