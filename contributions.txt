@@ -18,6 +18,7 @@ Nathan Tandory:
     4. Minor CSS & HTML tweaks and improvements. (client/src/App.vue, client/src/components/NowPlaying.vue, client/src/components/SongList.vue)
 
 Nathaniel Dizon:
-    1. Found and added all songs served by the backend and their database references. (server/assets/music/, server/data/db.json)
-    2. Song List Vue component: with song playing functionality to the client, including displayment of song genre. (client/src/components/SongList.vue)
-    ...
+    1. Client Vue implementation of the SongList component. (client/src/components/SongList.vue)
+    2. Connected SongList frontend component to backend API for working music playing. (client/src/components/SongList.vue)
+    3. Styling and display tweaks to the Player component. (client/src/components/NowPlaying.vue)
+    4. Sourcing and entering database data for MP3 files. (server/assets/music/)

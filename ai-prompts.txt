@@ -1,1 +1,7 @@
 LIST ANY AND ALL AI PROMPTS USED IN THIS PROJECT HERE:
+
+Nathaniel:
+> Can I use the music files found in this github repo as part of my own project: SoundSafari/CC0-1.0-Music: 🦒 The world's largest corpus of CC0-1.0 licensed music (public domain music).
+> So how can I properly credit/acknowledge this repo when adding songs from it to my own repo?
+
+> Why isn't my linear gradient applying? I know I'm referencing the correct tags because when I apply a solid color, it works: {The contents of the SongList component's style tag were also passed}
