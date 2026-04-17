@@ -10,3 +10,6 @@ Khristian:
 > For some reason the shuffle and repeat buttons are not highlighting when selected, why?
 
 > I am adjusting the size of the logo in the css, but it appears the same size, is there a conflict in the styling?
+
+Naufil:
+> I've noticed in the database, play_count and listen_duration don't update. Why is that?
