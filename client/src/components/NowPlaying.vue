@@ -57,7 +57,7 @@ watch(artURL, () => { artError.value = false }) // reset art error when the art 
     <span class="icon has-text-grey-light mr-2">
       <font-awesome-icon icon="music" />
     </span>
-    <span class="has-text-grey-light is-size-7">Select a song to start listening</span>
+    <span class="has-text-grey-light is-size-9">Select a song to start listening</span>
   </div>
 
   <!-- Player -->

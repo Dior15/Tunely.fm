@@ -20,7 +20,7 @@ function toggleMenu() {
 <template>
   
   <div id="tunely-app">
-    <NavBar @navigate = "changePage" />
+    <NavBar :active-page="currentPage" @navigate = "changePage" />
     <!-- Bulma style navbar -->
     <!-- <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">

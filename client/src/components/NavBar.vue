@@ -1,10 +1,12 @@
 <script setup>
+const props = defineProps({
+  activePage: {
+    type: String,
+    default: 'home',
+  },
+})
 
-  import {ref} from "vue"
-  const emit = defineEmits(["navigate"])
-  const isMenuActive = ref(false)
-  function toggleMenu() {isMenuActive.value = !isMenuActive.value}
-
+const emit = defineEmits(['navigate'])
 </script>
 
 <template>
@@ -68,12 +70,42 @@
     </div>
 
     <div class="navbar-menu is-active">
-      <div class="navbar-end">
-        <a class="navbar-item" style="cursor: pointer;" @click="emit('navigate', 'home')">Home</a>
-        <a class="navbar-item" style="cursor: pointer;" @click="emit('navigate', 'stats')">Stats</a>
-        <a class="navbar-item" href="/pages/about.html">About</a>
-        <a class="navbar-item" href="/pages/contact.html">Contact</a>
-        <a class="navbar-item" href="/pages/info.html">Info</a>
+      <div class="navbar-end tunely-nav-controls">
+        <button
+          type="button"
+          class="navbar-item tunely-section-btn"
+          :class="{ 'is-active': props.activePage === 'home' }"
+          @click="emit('navigate', 'home')"
+        >
+          Songs
+        </button>
+
+        <button
+          type="button"
+          class="navbar-item tunely-section-btn"
+          :class="{ 'is-active': props.activePage === 'stats' }"
+          @click="emit('navigate', 'stats')"
+        >
+          Statistics
+        </button>
+
+        <details class="tunely-dropdown">
+          <summary
+            class="navbar-item tunely-dropdown-trigger"
+            aria-label="Open static pages menu"
+            title="Static pages"
+          >
+            <span class="icon" aria-hidden="true">
+              <font-awesome-icon icon="angles-down" />
+            </span>
+          </summary>
+
+          <div class="tunely-dropdown-menu">
+            <a class="navbar-item tunely-dropdown-item" href="/pages/about.html">About</a>
+            <a class="navbar-item tunely-dropdown-item" href="/pages/contact.html">Contact</a>
+            <a class="navbar-item tunely-dropdown-item" href="/pages/info.html">Info</a>
+          </div>
+        </details>
       </div>
     </div>
   </nav>
@@ -100,6 +132,12 @@
   padding: 0;
 }
 
+.tunely-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
 .tunely-logo-svg {
   display: block;
   height: 3.5rem;
@@ -121,6 +159,81 @@
   margin-left: 0.35rem;
   padding: 0.4rem 0.95rem;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.tunely-navbar .tunely-section-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tunely-navbar .tunely-section-btn.is-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.35), rgba(74, 152, 255, 0.3));
+  box-shadow: 0 0 0 1px rgba(160, 199, 255, 0.22) inset;
+}
+
+.tunely-dropdown {
+  position: relative;
+  margin-right: 0.35rem;
+}
+
+.tunely-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tunely-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tunely-dropdown-trigger {
+  min-width: auto;
+  margin-left: 0.2rem !important;
+  padding: 0.4rem 0.55rem !important;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tunely-dropdown-trigger .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.tunely-dropdown[open] > summary {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.28), rgba(74, 152, 255, 0.22));
+}
+
+.tunely-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.45rem);
+  min-width: 9rem;
+  display: none;
+  flex-direction: column;
+  padding: 0.45rem;
+  border-radius: 0.8rem;
+  background: rgba(16, 10, 27, 0.97);
+  border: 1px solid rgba(165, 121, 232, 0.32);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  z-index: 12;
+}
+
+.tunely-dropdown[open] .tunely-dropdown-menu {
+  display: flex;
+}
+
+.tunely-navbar .tunely-dropdown-item {
+  margin-left: 0;
+  border-radius: 0.6rem;
 }
 
 .tunely-navbar .tunely-logo {
@@ -152,10 +265,18 @@
     width: 100%;
   }
 
+  .tunely-navbar .tunely-nav-controls {
+    gap: 0.12rem;
+  }
+
   .tunely-navbar .navbar-item {
     margin-left: 0.25rem;
     padding: 0.35rem 0.7rem;
     font-size: 0.82rem;
+  }
+
+  .tunely-dropdown-menu {
+    min-width: 8rem;
   }
 
   .tunely-logo-svg {

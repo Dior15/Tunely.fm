@@ -1,11 +1,14 @@
 Each contribution by individial along with the relevant files created or modified in accomplishment of the task.
 
 Khristian Diorico:
-    1. Client Vue implementation of the navbar, song list, and player components. (client/src/App.vue, client/src/components/NowPlaying.vue, client/src/components/SongList.vue)
+    1. Client Vue implementation of the Navbar, and Player components. (client/src/App.vue, client/src/components/NowPlaying.vue)
+    2. Static Page CSS Styling (client\public\pages\static-style.css)
     ...
 
 Muhammad naufil Ansari:
-    1. MP4 video demo of the project.
+    1. Static Pages HTML. (client\public\pages\about.html, client\public\pages\contact.html, client\public\pages\info.html)
+    2. Statistic Vue component (client/src/components/Statistics.vue)
+    3. MP4 video demo of the project.
     ...
 
 Nathan Tandory:
@@ -16,5 +19,5 @@ Nathan Tandory:
 
 Nathaniel Dizon:
     1. Found and added all songs served by the backend and their database references. (server/assets/music/, server/data/db.json)
-    2. Added song playing functionality to the client, including displayment of song genre. (client/src/components/SongList.vue)
+    2. Song List Vue component: with song playing functionality to the client, including displayment of song genre. (client/src/components/SongList.vue)
     ...

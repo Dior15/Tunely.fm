@@ -7,7 +7,7 @@
       "album": "3AM West End",
       "year": null,
       "genre": "Unclassifiable",
-      "play_count": 3,
+      "play_count": 6,
       "listen_duration": {
         "average": 8.83,
         "num_samples": 2
@@ -67,7 +67,7 @@
       "album": "Celebrating 50 Years",
       "year": 2014,
       "genre": "Classical",
-      "play_count": 0,
+      "play_count": 1,
       "listen_duration": {
         "average": 0,
         "num_samples": 0

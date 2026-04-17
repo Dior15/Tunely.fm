@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import "bulma/css/bulma.css"
-import './style.css'
 import App from './App.vue'
 
 // FontAwesome setup
