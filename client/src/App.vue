@@ -80,7 +80,7 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   height: 100svh;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   background: linear-gradient(165deg, #110920 0%, #0d0814 55%, #0a0c1a 100%);
   overflow: hidden;

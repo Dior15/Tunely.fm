@@ -29,14 +29,14 @@ body {
   text-align: center;
 }
 
-h1 { 
+h1 {
   color: var(--text-h);
-  font-size: 2rem; 
-  margin-bottom: 0.5rem; 
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-p  { 
-  margin-bottom: 2rem; 
+p {
+  margin-bottom: 2rem;
   max-width: 600px;
   line-height: 1.5;
 }
@@ -53,16 +53,16 @@ p  {
   transition: opacity 180ms;
 }
 
-.btn:hover { 
-  opacity: 0.85; 
+.btn:hover {
+  opacity: 0.85;
 }
 
 a {
-  color: #42b883; 
+  color: #42b883;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #33a06f; 
+  opacity: 0.8;
 }

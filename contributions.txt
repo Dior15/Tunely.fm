@@ -1,0 +1,20 @@
+Each contribution by individial along with the relevant files created or modified in accomplishment of the task.
+
+Khristian Diorico:
+    1. Client Vue implementation of the navbar, song list, and player components. (client/src/App.vue, client/src/components/NowPlaying.vue, client/src/components/SongList.vue)
+    ...
+
+Muhammad naufil Ansari:
+    1. MP4 video demo of the project.
+    ...
+
+Nathan Tandory:
+    1. Node.js/Express.js server backend and API. (server/server.js, server/data/db.json, server/paths/songs.js)
+    2. Placeholder cover art, its data pipeline from server to client, and its integration into the player. (server/paths/songs.js, client/src/usePlayer.js, client/src/components/NowPlaying.vue)
+    3. Marquee text oscillation animation, and its CSS & JS logic. (client/src/components/NowPlaying.vue)
+    4. Minor CSS & HTML tweaks and improvements. (client/src/App.vue, client/src/components/NowPlaying.vue, client/src/components/SongList.vue)
+
+Nathaniel Dizon:
+    1. Found and added all songs served by the backend and their database references. (server/assets/music/, server/data/db.json)
+    2. Added song playing functionality to the client, including displayment of song genre. (client/src/components/SongList.vue)
+    ...

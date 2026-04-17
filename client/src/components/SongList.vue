@@ -9,7 +9,7 @@
 
 <template>
 
-  <div id="container" class="box mt-3 mb-4 ml-6 mr-6">
+  <div id="container" class="box mt-3 mb-4">
     <!-- <h1 class="title">Tunely.fm</h1> -->
      <div id="listHeader" class="box is-flex mb-1 p-1 has-text-left is-vcentered">
         <span class="column is-one-third is-vcentered is-size-5 pt-0 pb-0"><p>Title</p></span>
@@ -27,8 +27,8 @@
           {{ song.title }}
         </span>
         <span class="artist column is-one-quarter">{{ song.artist }}</span>
-        <span class="album column is-one-quarter">{{ song.album }}</span>
-        <span class="year column has-text-right">{{ song.year }}</span>
+        <span class="album column is-one-quarter">{{ song.album ?? 'Unknown' }}</span>
+        <span class="year column has-text-right">{{ song.year ?? 'Unknown' }}</span>
       </div>
     </div>
   </div>
@@ -52,6 +52,9 @@
 
   #container {
     background-color: #1f1f1f;
+    max-width: 900px;
+    min-width: 50%;
+    margin: 0 auto;
   }
 
   #listHeader span p {

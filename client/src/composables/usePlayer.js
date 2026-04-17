@@ -1,17 +1,17 @@
 import { ref, computed } from 'vue'
 
 // ─── Singleton state ───────────────────────────────────────────────────────────
-const songs       = ref([])
-const queue       = ref([])
-const queueIndex  = ref(-1)
+const songs = ref([])
+const queue = ref([])
+const queueIndex = ref(-1)
 const currentSong = ref(null)
-const isPlaying   = ref(false)
-const isLoading   = ref(false)
-const shuffle     = ref(false)
-const repeat      = ref('none')   // 'none' | 'all' | 'one'
+const isPlaying = ref(false)
+const isLoading = ref(false)
+const shuffle = ref(false)
+const repeat = ref('none')   // 'none' | 'all' | 'one'
 const currentTime = ref(0)
-const duration    = ref(0)
-const volume      = ref(1)
+const duration = ref(0)
+const volume = ref(.5)
 
 const audio = new Audio()
 let _raf = null
@@ -21,7 +21,7 @@ function _startRaf() {
   _stopRaf()
   function tick() {
     currentTime.value = audio.currentTime
-    duration.value    = isFinite(audio.duration) ? audio.duration : 0
+    duration.value = isFinite(audio.duration) ? audio.duration : 0
     _raf = requestAnimationFrame(tick)
   }
   _raf = requestAnimationFrame(tick)
@@ -36,7 +36,7 @@ function _buildQueue(startId = null) {
   if (shuffle.value) {
     for (let i = indices.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[indices[i], indices[j]] = [indices[j], indices[i]]
+        ;[indices[i], indices[j]] = [indices[j], indices[i]]
     }
     if (startId !== null) {
       const pos = indices.findIndex(i => songs.value[i].id === startId)
@@ -56,10 +56,10 @@ function _loadAndPlay() {
   const songObj = songs.value[queue.value[queueIndex.value]]
   if (!songObj) return
   currentSong.value = songObj
-  isLoading.value   = true
+  isLoading.value = true
   // Set src without calling .load() — setting src is enough to start loading.
   // Calling .load() then .play() immediately causes an AbortError in most browsers.
-  audio.src    = `http://localhost:3000/api/songs/stream?id=${songObj.id}`
+  audio.src = `http://localhost:3000/api/songs/stream?id=${songObj.id}`
   audio.volume = volume.value
   audio.play().catch(err => console.warn('Playback error:', err))
 }
@@ -83,11 +83,11 @@ function prev() {
 }
 
 // ─── Audio events ──────────────────────────────────────────────────────────────
-audio.addEventListener('play',            () => { isPlaying.value = true;  _startRaf() })
-audio.addEventListener('pause',           () => { isPlaying.value = false; _stopRaf()  })
-audio.addEventListener('canplay',         () => { isLoading.value = false })
-audio.addEventListener('waiting',         () => { isLoading.value = true  })
-audio.addEventListener('loadedmetadata',  () => { duration.value  = audio.duration })
+audio.addEventListener('play', () => { isPlaying.value = true; _startRaf() })
+audio.addEventListener('pause', () => { isPlaying.value = false; _stopRaf() })
+audio.addEventListener('canplay', () => { isLoading.value = false })
+audio.addEventListener('waiting', () => { isLoading.value = true })
+audio.addEventListener('loadedmetadata', () => { duration.value = audio.duration })
 audio.addEventListener('ended', () => {
   if (repeat.value === 'one') {
     audio.currentTime = 0; audio.play()
@@ -103,7 +103,7 @@ export function usePlayer() {
   async function fetchSongs() {
     if (songs.value.length) return
     try {
-      const res  = await fetch('http://localhost:3000/api/songs')
+      const res = await fetch('http://localhost:3000/api/songs')
       songs.value = await res.json()
     } catch (e) {
       console.error('Failed to fetch songs', e)
@@ -137,7 +137,7 @@ export function usePlayer() {
   }
 
   function cycleRepeat() {
-    const modes  = ['none', 'all', 'one']
+    const modes = ['none', 'all', 'one']
     repeat.value = modes[(modes.indexOf(repeat.value) + 1) % modes.length]
   }
 
@@ -145,10 +145,14 @@ export function usePlayer() {
     duration.value > 0 ? (currentTime.value / duration.value) * 100 : 0
   )
 
+  const artURL = computed(() =>
+    currentSong.value?.art_source ?? null
+  )
+
   return {
     songs, currentSong, isPlaying, isLoading,
     shuffle, repeat,
-    currentTime, duration, volume, progress,
+    currentTime, duration, volume, progress, artURL,
     fetchSongs, playSong, togglePlay, next, prev,
     seek, setVolume, toggleShuffle, cycleRepeat,
   }

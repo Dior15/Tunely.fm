@@ -1,11 +1,12 @@
 import express from 'express'
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const router = express.Router()
 const full_path = dirname(fileURLToPath(import.meta.url))
 const db_path = join(full_path, '../data/db.json')
+const music_path = join(full_path, '../assets/music')
 
 // helper function to get current database on each call.
 function _get_db() {
@@ -47,8 +48,29 @@ router.get('/stream', (req, res) => {
     if (!song) return res.status(404).json({ error: 'song not found' })
 
     // build path to song file and send.
-    const file_path = join(full_path, '../music', song.file)
+    const file_path = join(music_path, song.file)
     res.sendFile(file_path)
+})
+
+/*
+    GET /api/songs/art
+
+    usage: http://localhost:<port>/api/songs/art?id=<song_id>
+
+    returns a single song's album art by its ID.
+*/
+router.get('/art', (req, res) => {
+    const { songs } = _get_db()
+    const { id } = req.query
+
+    // find song by its ID by querying the database.
+    const song = songs.find(song => song.id === parseInt(id))
+    if (!song) return res.status(404).json({ error: 'song not found' })
+    // songs with null art or invalid art file paths return 404 to tell client to use default art display.
+    if (!song.art_source) return res.status(404).json({ error: 'song art not found' })
+
+    // send the art source (url) to the client.
+    res.json({ art_source: song.art_source })
 })
 
 /*
