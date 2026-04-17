@@ -16,6 +16,17 @@ const volume = ref(.5)
 const audio = new Audio()
 let _raf = null
 
+// calculate audio playtime
+let activeListenTime = 0;
+let lastPlayTimestamp = 0;
+audio.addEventListener("play", () => {lastPlayTimestamp = Date.now();});
+audio.addEventListener("pause", () => {
+  if (lastPlayTimestamp) {
+    activeListenTime += (Date.now() - lastPlayTimestamp) / 1000;
+    lastPlayTimestamp = 0;
+  }
+});
+
 // ─── RAF ticker for scrubber ───────────────────────────────────────────────────
 function _startRaf() {
   _stopRaf()
@@ -53,6 +64,7 @@ function _buildQueue(startId = null) {
 
 // ─── Core playback (module-scope so ended listener can reference them) ─────────
 function _loadAndPlay() {
+  _submitListenDuration();
   const songObj = songs.value[queue.value[queueIndex.value]]
   if (!songObj) return
   currentSong.value = songObj
@@ -62,6 +74,49 @@ function _loadAndPlay() {
   audio.src = `http://localhost:3000/api/songs/stream?id=${songObj.id}`
   audio.volume = volume.value
   audio.play().catch(err => console.warn('Playback error:', err))
+
+  // To increment play count of song
+  fetch('http://localhost:3000/api/songs/play', {
+    method: 'POST', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ id: songObj.id })
+  })
+    .then(res => {
+
+      if (!res.ok) throw new Error(`Server responded with ${res.status} status`);
+      return res.json();
+
+    })
+    .then(data => console.log("Updated play count: ", data))
+
+}
+
+// Send audio to backend
+function _submitListenDuration() {
+
+  if (!currentSong.value) return;
+  if (lastPlayTimestamp && !audio.paused) {activeListenTime += (Date.now() - lastPlayTimestamp) / 1000;}
+
+  if (activeListenTime > 0) {
+
+    fetch("http://localhost:3000/api/songs/duration", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ 
+        id: currentSong.value.id, 
+        duration: activeListenTime 
+      })
+    })
+    .then(res => res.json())
+    .then(data => console.log("Updated duration: ", data))
+
+  }
+
+  activeListenTime = 0;
+  lastPlayTimestamp = Date.now();
+
 }
 
 function next() {

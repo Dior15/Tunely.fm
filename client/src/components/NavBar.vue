@@ -1,3 +1,12 @@
+<script setup>
+
+  import {ref} from "vue"
+  const emit = defineEmits(["navigate"])
+  const isMenuActive = ref(false)
+  function toggleMenu() {isMenuActive.value = !isMenuActive.value}
+
+</script>
+
 <template>
   <nav class="navbar tunely-navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -60,6 +69,8 @@
 
     <div class="navbar-menu is-active">
       <div class="navbar-end">
+        <a class="navbar-item" style="cursor: pointer;" @click="emit('navigate', 'home')">Home</a>
+        <a class="navbar-item" style="cursor: pointer;" @click="emit('navigate', 'stats')">Stats</a>
         <a class="navbar-item" href="/pages/about.html">About</a>
         <a class="navbar-item" href="/pages/contact.html">Contact</a>
         <a class="navbar-item" href="/pages/info.html">Info</a>

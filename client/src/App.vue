@@ -1,7 +1,11 @@
 <script setup>
 import SongList from "./components/SongList.vue"
+import Stats from "./components/Stats.vue"
 import NowPlaying from './components/NowPlaying.vue'
 import NavBar     from './components/NavBar.vue'
+
+const currentPage = ref('home')
+function changePage(page) {currentPage.value = page}
 
 // navbar toggle based on screen-size
 import {ref} from 'vue'
@@ -16,7 +20,7 @@ function toggleMenu() {
 <template>
   
   <div id="tunely-app">
-    <NavBar />
+    <NavBar @navigate = "changePage" />
     <!-- Bulma style navbar -->
     <!-- <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -48,7 +52,8 @@ function toggleMenu() {
       </div>
     </nav> -->
     <main class="tunely-main">
-      <SongList />
+      <SongList v-if="currentPage === 'home'" />
+      <Stats v-else-if="currentPage === 'stats'" />
     </main>
     <NowPlaying />
   </div>

@@ -1,304 +1,304 @@
 {
-    "songs": [
-        {
-            "id": 1,
-            "title": "3AM West End",
-            "artist": "statusq",
-            "album": "3AM West End",
-            "year": null,
-            "genre": "Unclassifiable",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "3am-west-end.mp3",
-            "art_source": "https://picsum.photos/100"
-        },
-        {
-            "id": 2,
-            "title": "A good bass for gambling",
-            "artist": "Komiku",
-            "album": "A good bass for gambling",
-            "year": null,
-            "genre": "Folk",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "a-good-bass-for-gambling.mp3",
-            "art_source": "https://picsum.photos/101"
-        },
-        {
-            "id": 3,
-            "title": "Americana",
-            "artist": "Holizna",
-            "album": "Americana",
-            "year": 2022,
-            "genre": null,
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "americana.mp3",
-            "art_source": "https://picsum.photos/102"
-        },
-        {
-            "id": 4,
-            "title": "Aria",
-            "artist": "Kimiko Ishizaka",
-            "album": "The Open Goldberg Variations",
-            "year": 2012,
-            "genre": "Classical",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "aria.mp3",
-            "art_source": "https://picsum.photos/103"
-        },
-        {
-            "id": 5,
-            "title": "Bach's March Fur Die Arche",
-            "artist": "The United Sated Army Old Guard Fife and Drums Corps",
-            "album": "Celebrating 50 Years",
-            "year": 2014,
-            "genre": "Classical",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "bachs-march-fur-die-arche.mp3",
-            "art_source": "https://picsum.photos/104"
-        },
-        {
-            "id": 6,
-            "title": "Chicken Reel",
-            "artist": "Arthur Collins",
-            "album": "Antique Phonograph Music Program 04/21/2009",
-            "year": 1911,
-            "genre": "Old-Time",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "chicken-reel.mp3",
-            "art_source": "https://picsum.photos/105"
-        },
-        {
-            "id": 7,
-            "title": "D D D Dancing",
-            "artist": "Soft and Furious",
-            "album": "Dancing in the closet",
-            "year": 2017,
-            "genre": "Electronic",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "d-d-d-dancing.mp3",
-            "art_source": "https://picsum.photos/106"
-        },
-        {
-            "id": 8,
-            "title": "Dirty shoes blues",
-            "artist": "Loyalty Freak Music",
-            "album": "INSTRUMENTAL RandB BEATS TO SING OR RAP ON",
-            "year": 2018,
-            "genre": "Hip-Hop",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "dirty-shoes-blues.mp3",
-            "art_source": "https://picsum.photos/107"
-        },
-        {
-            "id": 9,
-            "title": "END",
-            "artist": "Koi-discovery",
-            "album": "Post Morphose",
-            "year": null,
-            "genre": "Unkown",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "end.mp3",
-            "art_source": "https://picsum.photos/108"
-        },
-        {
-            "id": 10,
-            "title": "Halloween Ghost Party",
-            "artist": "Loyalty Freak Music",
-            "album": "WITCHY, BATTY, SPOOKY, HALLOWEEN IN SEPTEMBER !!",
-            "year": 2018,
-            "genre": "Ambient",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "halloween-ghost-party.mp3",
-            "art_source": "https://picsum.photos/109"
-        },
-        {
-            "id": 11,
-            "title": "Interstellar breakfast",
-            "artist": "TRG Banks",
-            "album": "This train doesn't stop at Rugby",
-            "year": 2018,
-            "genre": "Soundtrack",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "interstellar-breakfast.mp3",
-            "art_source": "https://picsum.photos/110"
-        },
-        {
-            "id": 12,
-            "title": "It feels good to be alive too",
-            "artist": "Loyalty Freak Music",
-            "album": "ROBOT DANCE !",
-            "year": 2017,
-            "genre": "Electronic",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "it-feels-good-to-be-alive-too.mp3",
-            "art_source": "https://picsum.photos/111"
-        },
-        {
-            "id": 13,
-            "title": "Lost in Space",
-            "artist": "Holizna",
-            "album": "Lost",
-            "year": 2022,
-            "genre": null,
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "lost-in-space.mp3",
-            "art_source": "https://picsum.photos/112"
-        },
-        {
-            "id": 14,
-            "title": "Lost in the City",
-            "artist": "Holizna",
-            "album": "Lost",
-            "year": 2022,
-            "genre": null,
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "lost-in-the-city.mp3",
-            "art_source": "https://picsum.photos/113"
-        },
-        {
-            "id": 15,
-            "title": "Medieval: Battle",
-            "artist": "RandomMind",
-            "album": null,
-            "year": null,
-            "genre": "Medieval",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "medieval-battle.mp3",
-            "art_source": "https://picsum.photos/114"
-        },
-        {
-            "id": 16,
-            "title": "Medieval: Exploration",
-            "artist": "RandomMind",
-            "album": null,
-            "year": null,
-            "genre": null,
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "medieval-exploration.mp3",
-            "art_source": "https://picsum.photos/115"
-        },
-        {
-            "id": 17,
-            "title": "One",
-            "artist": "Cathedral Of Chemical Equilibrium",
-            "album": "Sonic Action and Regulation",
-            "year": 2017,
-            "genre": null,
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "one.mp3",
-            "art_source": "https://picsum.photos/116"
-        },
-        {
-            "id": 18,
-            "title": "Sad Floor",
-            "artist": "Monplaisir",
-            "album": "Power Animal",
-            "year": 2017,
-            "genre": "Rock",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "sad-floor.mp3",
-            "art_source": "https://picsum.photos/117"
-        },
-        {
-            "id": 19,
-            "title": "Shake me, Baby",
-            "artist": "Soft and Furious",
-            "album": "Dancing in the closet",
-            "year": 2017,
-            "genre": "Electronic",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "shake-me-baby.mp3",
-            "art_source": "https://picsum.photos/118"
-        },
-        {
-            "id": 20,
-            "title": "Tinnitus Dance",
-            "artist": "Dancefloor is Lava",
-            "album": "La Boum 2020",
-            "year": 2018,
-            "genre": "Disco",
-            "play_count": 0,
-            "listen_duration": {
-                "average": 0,
-                "num_samples": 0
-            },
-            "file": "tinnitus-dance.mp3",
-            "art_source": "https://picsum.photos/119"
-        }
-    ]
+  "songs": [
+    {
+      "id": 1,
+      "title": "3AM West End",
+      "artist": "statusq",
+      "album": "3AM West End",
+      "year": null,
+      "genre": "Unclassifiable",
+      "play_count": 3,
+      "listen_duration": {
+        "average": 8.83,
+        "num_samples": 2
+      },
+      "file": "3am-west-end.mp3",
+      "art_source": "https://picsum.photos/100"
+    },
+    {
+      "id": 2,
+      "title": "A good bass for gambling",
+      "artist": "Komiku",
+      "album": "A good bass for gambling",
+      "year": null,
+      "genre": "Folk",
+      "play_count": 2,
+      "listen_duration": {
+        "average": 1.815,
+        "num_samples": 2
+      },
+      "file": "a-good-bass-for-gambling.mp3",
+      "art_source": "https://picsum.photos/101"
+    },
+    {
+      "id": 3,
+      "title": "Americana",
+      "artist": "Holizna",
+      "album": "Americana",
+      "year": 2022,
+      "genre": null,
+      "play_count": 1,
+      "listen_duration": {
+        "average": 2.015,
+        "num_samples": 1
+      },
+      "file": "americana.mp3",
+      "art_source": "https://picsum.photos/102"
+    },
+    {
+      "id": 4,
+      "title": "Aria",
+      "artist": "Kimiko Ishizaka",
+      "album": "The Open Goldberg Variations",
+      "year": 2012,
+      "genre": "Classical",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "aria.mp3",
+      "art_source": "https://picsum.photos/103"
+    },
+    {
+      "id": 5,
+      "title": "Bach's March Fur Die Arche",
+      "artist": "The United Sated Army Old Guard Fife and Drums Corps",
+      "album": "Celebrating 50 Years",
+      "year": 2014,
+      "genre": "Classical",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "bachs-march-fur-die-arche.mp3",
+      "art_source": "https://picsum.photos/104"
+    },
+    {
+      "id": 6,
+      "title": "Chicken Reel",
+      "artist": "Arthur Collins",
+      "album": "Antique Phonograph Music Program 04/21/2009",
+      "year": 1911,
+      "genre": "Old-Time",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "chicken-reel.mp3",
+      "art_source": "https://picsum.photos/105"
+    },
+    {
+      "id": 7,
+      "title": "D D D Dancing",
+      "artist": "Soft and Furious",
+      "album": "Dancing in the closet",
+      "year": 2017,
+      "genre": "Electronic",
+      "play_count": 1,
+      "listen_duration": {
+        "average": 6.048,
+        "num_samples": 1
+      },
+      "file": "d-d-d-dancing.mp3",
+      "art_source": "https://picsum.photos/106"
+    },
+    {
+      "id": 8,
+      "title": "Dirty shoes blues",
+      "artist": "Loyalty Freak Music",
+      "album": "INSTRUMENTAL RandB BEATS TO SING OR RAP ON",
+      "year": 2018,
+      "genre": "Hip-Hop",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "dirty-shoes-blues.mp3",
+      "art_source": "https://picsum.photos/107"
+    },
+    {
+      "id": 9,
+      "title": "END",
+      "artist": "Koi-discovery",
+      "album": "Post Morphose",
+      "year": null,
+      "genre": "Unkown",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "end.mp3",
+      "art_source": "https://picsum.photos/108"
+    },
+    {
+      "id": 10,
+      "title": "Halloween Ghost Party",
+      "artist": "Loyalty Freak Music",
+      "album": "WITCHY, BATTY, SPOOKY, HALLOWEEN IN SEPTEMBER !!",
+      "year": 2018,
+      "genre": "Ambient",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "halloween-ghost-party.mp3",
+      "art_source": "https://picsum.photos/109"
+    },
+    {
+      "id": 11,
+      "title": "Interstellar breakfast",
+      "artist": "TRG Banks",
+      "album": "This train doesn't stop at Rugby",
+      "year": 2018,
+      "genre": "Soundtrack",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "interstellar-breakfast.mp3",
+      "art_source": "https://picsum.photos/110"
+    },
+    {
+      "id": 12,
+      "title": "It feels good to be alive too",
+      "artist": "Loyalty Freak Music",
+      "album": "ROBOT DANCE !",
+      "year": 2017,
+      "genre": "Electronic",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "it-feels-good-to-be-alive-too.mp3",
+      "art_source": "https://picsum.photos/111"
+    },
+    {
+      "id": 13,
+      "title": "Lost in Space",
+      "artist": "Holizna",
+      "album": "Lost",
+      "year": 2022,
+      "genre": null,
+      "play_count": 1,
+      "listen_duration": {
+        "average": 22.817,
+        "num_samples": 1
+      },
+      "file": "lost-in-space.mp3",
+      "art_source": "https://picsum.photos/112"
+    },
+    {
+      "id": 14,
+      "title": "Lost in the City",
+      "artist": "Holizna",
+      "album": "Lost",
+      "year": 2022,
+      "genre": null,
+      "play_count": 1,
+      "listen_duration": {
+        "average": 10.817,
+        "num_samples": 1
+      },
+      "file": "lost-in-the-city.mp3",
+      "art_source": "https://picsum.photos/113"
+    },
+    {
+      "id": 15,
+      "title": "Medieval: Battle",
+      "artist": "RandomMind",
+      "album": null,
+      "year": null,
+      "genre": "Medieval",
+      "play_count": 1,
+      "listen_duration": {
+        "average": 3.975,
+        "num_samples": 1
+      },
+      "file": "medieval-battle.mp3",
+      "art_source": "https://picsum.photos/114"
+    },
+    {
+      "id": 16,
+      "title": "Medieval: Exploration",
+      "artist": "RandomMind",
+      "album": null,
+      "year": null,
+      "genre": null,
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "medieval-exploration.mp3",
+      "art_source": "https://picsum.photos/115"
+    },
+    {
+      "id": 17,
+      "title": "One",
+      "artist": "Cathedral Of Chemical Equilibrium",
+      "album": "Sonic Action and Regulation",
+      "year": 2017,
+      "genre": null,
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "one.mp3",
+      "art_source": "https://picsum.photos/116"
+    },
+    {
+      "id": 18,
+      "title": "Sad Floor",
+      "artist": "Monplaisir",
+      "album": "Power Animal",
+      "year": 2017,
+      "genre": "Rock",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "sad-floor.mp3",
+      "art_source": "https://picsum.photos/117"
+    },
+    {
+      "id": 19,
+      "title": "Shake me, Baby",
+      "artist": "Soft and Furious",
+      "album": "Dancing in the closet",
+      "year": 2017,
+      "genre": "Electronic",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "shake-me-baby.mp3",
+      "art_source": "https://picsum.photos/118"
+    },
+    {
+      "id": 20,
+      "title": "Tinnitus Dance",
+      "artist": "Dancefloor is Lava",
+      "album": "La Boum 2020",
+      "year": 2018,
+      "genre": "Disco",
+      "play_count": 0,
+      "listen_duration": {
+        "average": 0,
+        "num_samples": 0
+      },
+      "file": "tinnitus-dance.mp3",
+      "art_source": "https://picsum.photos/119"
+    }
+  ]
 }
